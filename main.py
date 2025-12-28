@@ -1,17 +1,10 @@
-import tkinter as tk
-from video_stream import VideoStreamHandler
-from content_description import ContentDescriber
+from src.gui import AppGui
 
-root = tk.Tk()
-root.title("Webcam Stream")
 
-user_input = tk.Entry(root, width=50)
-user_input.pack()
+def main():
+	app = AppGui()
+	app.run()
 
-canvas = tk.Canvas(root, width=640, height=480)
-canvas.pack()
 
-video_handler = VideoStreamHandler(root, canvas)
-content_describer = ContentDescriber(root, user_input, video_handler)
-
-root.mainloop()
+if __name__ == '__main__':
+	main()

@@ -1,0 +1,13 @@
+
+# Core
+opencv-python
+Pillow
+requests
+python-dotenv
+
+# TTS (offline preferred, optional online fallback)
+pyttsx3
+gTTS
+
+# Optional: better translation (if desired)
+deep-translator

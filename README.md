@@ -3,9 +3,9 @@
 <h1>SeeSpeakTranslate_GUI</h1>
 
 <h2>Description</h2>
-<p>
-    This project provides a content description application that can analyze frames from real-time video streams, supports multiple languages, and includes text-to-speech (TTS) capabilities. Utilizing powerful AI models from Google, the application analyzes images and delivers descriptions in various languages, which can also be audibly presented. It features a user-friendly interface with customizable style options.
-</p>
+    <p>
+        This project provides a content description application that can analyze frames from real-time video streams, supports multiple languages, and includes text-to-speech (TTS) capabilities. The default generation backend is Ollama (local/hosted). The application analyzes images and delivers descriptions in various languages, which can also be audibly presented. It features a user-friendly interface with customizable style options.
+    </p>
 
 <h2>Features</h2>
 <ul>
@@ -51,8 +51,12 @@
         <pre><code>pip install -r requirements.txt</code></pre>
     </li>
     <li>
-        <p><strong>Set Up Environment Variables:</strong></p>
-        <p>Add your Google API key to the <code>.env</code> file.</p>
+        <p><strong>Ollama (Default) Setup:</strong></p>
+        <p>This project expects Ollama as the default generation backend. Configure the following in <code>.env</code> if needed:</p>
+        <pre><code>OLLAMA_URL=http://localhost:11434/api/generate
+OLLAMA_MODEL=gpt-4o-mini
+</code></pre>
+        <p>Install the <code>requests</code> package if not already installed: <code>pip install requests</code></p>
     </li>
     <li>
         <p><strong>Run the Application:</strong></p>
